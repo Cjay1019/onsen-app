@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <title>Onsen Test</title>
+  </head>
+
+  <body>
+    <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
+
+    <template id="page1.html">
+      <ons-page id="page1">
+        <ons-toolbar>
+          <div class="center">Register</div>
+        </ons-toolbar>
+        <div style="text-align: center; margin-top: 30px;">
+          <p>
+            <ons-input id="name" modifier="underbar" placeholder="Name" float>
+            </ons-input>
+          </p>
+          <p>
+            <ons-input
+              id="date"
+              modifier="underbar"
+              placeholder="Date of Birth"
+              float
+            >
+            </ons-input>
+          </p>
+          <br />
+            <h3>Choose your languages:</h3>
+            <ons-list>
+            <ons-list-item tappable>
+              <label class="left">
+                <ons-checkbox input-id="html"></ons-checkbox>
+              </label>
+              <label for="html">
+                HTML
+              </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+              <label class="left">
+                <ons-checkbox input-id="css"></ons-checkbox>
+              </label>
+              <label for="css">
+                CSS
+              </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+              <label class="left">
+                <ons-checkbox input-id="javascript"></ons-checkbox>
+              </label>
+              <label for="javascript">
+                Javascript
+              </label>
+            </ons-list-item>
+          </ons-list>
+            <h3>Choose your gender:</h3>
+            <ons-list>
+            <ons-list-item tappable>
+              <label class="left">
+                <ons-radio name="gender" input-id="male" checked></ons-radio>
+              </label>
+              <label for="male">
+                Male
+              </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+              <label class="left">
+                <ons-radio name="gender" input-id="female"></ons-radio>
+              </label>
+              <label for="female">
+                Female
+              </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+              <label class="left">
+                <ons-radio name="gender" input-id="other"></ons-radio>
+              </label>
+              <label for="other">
+                Other
+              </label>
+            </ons-list-item>
+          </ons-list>
+        </ons-list>
+
+          <h3>Desired Position:</h3>
+          <ons-select id="selector">
+            <option value="Front End Developer">Front End Developer</option>
+            <option value="Back End Developer">Back End Developer</option>
+            <option value="Database Developer">Database Developer</option>
+          </ons-select>
+          <br />
+          <br />
+          <ons-button id="submit-button">Submit</ons-button>
+        </div>
+      </ons-page>
+    </template>
+
+    <template id="page2.html">
+      <ons-page id="page2">
+        <ons-toolbar>
+          <div class="left">
+            <ons-back-button>Register</ons-back-button>
+          </div>
+          <div class="center"></div>
+        </ons-toolbar>
+
+        <ons-list-title>List Title</ons-list-title>
+<ons-list>
+  <ons-list-item>Item</ons-list-item>
+</ons-list>
+      </ons-page>
+    </template>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="scripts.js"></script>
+</html>
