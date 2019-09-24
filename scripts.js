@@ -1,6 +1,6 @@
 document.addEventListener("init", function(event) {
   var page = event.target;
-  if (page.id === "page1") {
+  if (page.id === "register") {
     page.querySelector("#submit-button").onclick = function() {
       console.log(
         page.querySelector("#name").value,
@@ -13,11 +13,13 @@ document.addEventListener("init", function(event) {
         page.querySelector("#other").checked,
         page.querySelector("#selector").value
       );
+
+      // navigates to second onsen page
       document
         .querySelector("#myNavigator")
-        .pushPage("page2.html", { data: { title: "Profile" } });
+        .pushPage("profile.html", { data: { title: "Profile" } });
     };
-  } else if (page.id === "page2") {
+  } else if (page.id === "profile") {
     page.querySelector("ons-toolbar .center").innerHTML = page.data.title;
   }
 });

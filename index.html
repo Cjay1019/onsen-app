@@ -13,30 +13,35 @@
   </head>
 
   <body>
-    <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
+    <ons-navigator
+      swipeable
+      id="myNavigator"
+      page="register.html"
+    ></ons-navigator>
 
-    <template id="page1.html">
-      <ons-page id="page1">
+    <template id="register.html">
+      <ons-page id="register">
         <ons-toolbar>
           <div class="center">Register</div>
         </ons-toolbar>
-        <div style="text-align: center; margin-top: 30px;">
-          <p>
-            <ons-input id="name" modifier="underbar" placeholder="Name" float>
-            </ons-input>
-          </p>
-          <p>
-            <ons-input
-              id="date"
-              modifier="underbar"
-              placeholder="Date of Birth"
-              float
-            >
-            </ons-input>
-          </p>
-          <br />
-            <h3>Choose your languages:</h3>
-            <ons-list>
+        <div style="text-align: center;">
+          <ons-list>
+            <ons-list-header>Personal Information</ons-list-header>
+            <ons-list-item>
+              <ons-input id="name" modifier="underbar" placeholder="Name" float>
+              </ons-input>
+            </ons-list-item>
+            <ons-list-item>
+              <ons-input
+                id="date"
+                modifier="underbar"
+                placeholder="Date of Birth"
+                float
+              >
+              </ons-input>
+            </ons-list-item>
+
+            <ons-list-header>Known languages:</ons-list-header>
             <ons-list-item tappable>
               <label class="left">
                 <ons-checkbox input-id="html"></ons-checkbox>
@@ -61,9 +66,9 @@
                 Javascript
               </label>
             </ons-list-item>
-          </ons-list>
-            <h3>Choose your gender:</h3>
-            <ons-list>
+
+            <ons-list-header>Gender:</ons-list-header>
+
             <ons-list-item tappable>
               <label class="left">
                 <ons-radio name="gender" input-id="male" checked></ons-radio>
@@ -88,15 +93,16 @@
                 Other
               </label>
             </ons-list-item>
-          </ons-list>
-        </ons-list>
 
-          <h3>Desired Position:</h3>
-          <ons-select id="selector">
-            <option value="Front End Developer">Front End Developer</option>
-            <option value="Back End Developer">Back End Developer</option>
-            <option value="Database Developer">Database Developer</option>
-          </ons-select>
+            <ons-list-header>Desired Position:</ons-list-header>
+            <ons-list-item>
+              <ons-select id="selector">
+                <option value="Front End Developer">Front End Developer</option>
+                <option value="Back End Developer">Back End Developer</option>
+                <option value="Database Developer">Database Developer</option>
+              </ons-select>
+            </ons-list-item>
+          </ons-list>
           <br />
           <br />
           <ons-button id="submit-button">Submit</ons-button>
@@ -104,8 +110,8 @@
       </ons-page>
     </template>
 
-    <template id="page2.html">
-      <ons-page id="page2">
+    <template id="profile.html">
+      <ons-page id="profile">
         <ons-toolbar>
           <div class="left">
             <ons-back-button>Register</ons-back-button>
@@ -114,9 +120,8 @@
         </ons-toolbar>
 
         <ons-list-title>List Title</ons-list-title>
-<ons-list>
-  <ons-list-item>Item</ons-list-item>
-</ons-list>
+
+        <ons-list-item>Item</ons-list-item>
       </ons-page>
     </template>
   </body>
