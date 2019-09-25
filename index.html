@@ -13,19 +13,25 @@
   </head>
 
   <body>
+    <!-- Onsen page navigator -->
     <ons-navigator
       swipeable
-      id="myNavigator"
+      id="navigator"
       page="register.html"
     ></ons-navigator>
 
+    <!-- Register page -->
     <template id="register.html">
       <ons-page id="register">
+        <!-- Register page toolpar -->
         <ons-toolbar>
           <div class="center">Register</div>
         </ons-toolbar>
+
+        <!-- Register page list -->
         <div style="text-align: center;">
           <ons-list>
+            <!-- Text input list items -->
             <ons-list-header>Personal Information</ons-list-header>
             <ons-list-item>
               <ons-input id="name" modifier="underbar" placeholder="Name" float>
@@ -40,8 +46,8 @@
               >
               </ons-input>
             </ons-list-item>
-
-            <ons-list-header>Known languages:</ons-list-header>
+            <!-- Checkbox list items -->
+            <ons-list-header>Known languages</ons-list-header>
             <ons-list-item tappable>
               <label class="left">
                 <ons-checkbox input-id="html"></ons-checkbox>
@@ -63,12 +69,11 @@
                 <ons-checkbox input-id="javascript"></ons-checkbox>
               </label>
               <label for="javascript">
-                Javascript
+                JavaScript
               </label>
             </ons-list-item>
-
-            <ons-list-header>Gender:</ons-list-header>
-
+            <!-- Radio button list items -->
+            <ons-list-header>Gender</ons-list-header>
             <ons-list-item tappable>
               <label class="left">
                 <ons-radio name="gender" input-id="male" checked></ons-radio>
@@ -93,8 +98,8 @@
                 Other
               </label>
             </ons-list-item>
-
-            <ons-list-header>Desired Position:</ons-list-header>
+            <!-- Selector list items -->
+            <ons-list-header>Desired Position</ons-list-header>
             <ons-list-item>
               <ons-select id="selector">
                 <option value="Front End Developer">Front End Developer</option>
@@ -105,26 +110,29 @@
           </ons-list>
           <br />
           <br />
+          <!-- Submit Button -->
           <ons-button id="submit-button">Submit</ons-button>
         </div>
       </ons-page>
     </template>
 
+    <!-- Profile Onsen page -->
     <template id="profile.html">
       <ons-page id="profile">
+        <!-- Profile page toolbar -->
         <ons-toolbar>
+          <!-- Back button -->
           <div class="left">
             <ons-back-button>Register</ons-back-button>
           </div>
           <div class="center"></div>
         </ons-toolbar>
 
-        <ons-list-title>List Title</ons-list-title>
-
-        <ons-list-item>Item</ons-list-item>
+        <ons-list id="user-data"></ons-list>
       </ons-page>
     </template>
   </body>
+
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
